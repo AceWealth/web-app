@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>MTM | Rad.io</title>
+		<!-- Icon stuffs -->
+		<link rel="icon" href="https://mortaltwilightmedia.com/wp-content/uploads/2018/09/cropped-mtm-logo-1-32x32.jpg" sizes="32x32">
+		<link rel="icon" href="https://mortaltwilightmedia.com/wp-content/uploads/2018/09/cropped-mtm-logo-1-192x192.jpg" sizes="192x192">
+		<link rel="apple-touch-icon-precomposed" href="https://mortaltwilightmedia.com/wp-content/uploads/2018/09/cropped-mtm-logo-1-180x180.jpg">
+		<link rel="apple-touch-icon-precomposed" href="https://mortaltwilightmedia.com/wp-content/uploads/2018/09/cropped-mtm-logo-1-180x180.jpg"> 
+		<!-- Javascript Stuffs -->
+		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		<script type="text/javascript" href="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+		<script type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+		<script src="https://cdn.plyr.io/3.4.8/plyr.js"></script>
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.4.8/plyr.css">
+		<!-- Local sheets -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/sheet.css">
+		<!-- Meta Tags -->
+		<meta name="apple-mobile-web-app-title" content="SelfhostedMouse" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+</head>
+<body class="noselect" style="background-color: #000; height: 100vh;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<noscript>Either your browser does not support JavaScript, or it is disabled! Please enabled to use our site.</noscript>
+<!-- init the webpage -->
+<script  src="js/index.js"></script>
+<script  src="js/titles.js"></script>
+<script  src="js/plyr.js"></script>
+<script>
+window.onload = function () {
+	WebPlayer();
+	loadNowPlaying();
+	document.getElementsByClassName("Player")[0].style.opacity = "1";
+}
+</script>
+</body>
+</html>
