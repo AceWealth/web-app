@@ -43,12 +43,21 @@ var mediaSCLink = row.now_playing.song.custom_fields.soundcloud_http
 var mediaSPLink = row.now_playing.song.custom_fields.spotify_http
 var mediaYTLink = row.now_playing.song.custom_fields.youtube_http
 
+if (sessionStorage.NPArtist == mediaArtist) {
+// console.log('Skipping...');
+	} else {
 sessionStorage.NPArtist = mediaArtist;
+}
+if (sessionStorage.NPTitle == mediaTitle) {
+// console.log('Skipping...');
+	} else {
 sessionStorage.NPTitle = mediaTitle;
+}
+if (sessionStorage.NPArt == mediaArt) {
+// console.log('Skipping...');
+	} else {
 sessionStorage.NPArt = mediaArt;
-sessionStorage.NPDuration = mediaDuration;
-sessionStorage.NPElapsed = mediaElapsed;
-sessionStorage.NPurl = audio.currentSrc;
+}
 
 sessionStorage.NPSoundCloud = mediaSCLink;
 sessionStorage.NPSpotify = mediaSPLink;
