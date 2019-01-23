@@ -6,20 +6,19 @@ var Player = React.createClass({ displayName: "Player",
 	getInitialState: function getInitialState() {
 		return {
 			playStatus: 'play',
-//			currentTime: sessionStorage.NPElapsed };
 			currentTime: 0 };
 	},
 	getDefaultProps: function getDefaultProps() {
 		return {
 			track: {
 				name: "",
-				artist: "MTM Radio",
-				album: "MTM Radio",
+				artist: localStorage.NPChannel,
+				album: localStorage.NPChannel,
 				year: 2019,
 				artwork: "",
 				elapsed: sessionStorage.NPElapsed,
 				duration: sessionStorage.NPDuration,
-				source: "https://mtmrad.io/radio/8000/live"
+				source: localStorage.NPurl,
 				},
 			};
 	},
@@ -41,19 +40,6 @@ var Player = React.createClass({ displayName: "Player",
 			audio.play();
 			var that = this;
 			loadNowPlaying();
-/*
-			setInterval(function () {
-			//audio.currentTime = that.props.track.elapsed;
-			var currentTime = audio.currentTime;
-			// var currentTime = that.props.track.elapsed;
-			var duration = that.props.track.duration;
-
-				// Calculate percent of song
-				var percent = currentTime / duration * 100 + '%';
-				that.updateScrubber(percent);
-				that.updateTime(currentTime);
-			}, 100);
-*/
 		} else {
 			status = 'play';
 			audio.pause();
@@ -66,7 +52,7 @@ var Player = React.createClass({ displayName: "Player",
 				React.createElement("div", { className: "Player animated bounceIn delay-2s" },
 				React.createElement("div", { className: "Background", style: { 'backgroundImage': 'url(' + this.props.track.artwork + ')' } }),
 				React.createElement("div", { className: "Header" },
-				React.createElement("div", { className: "Title" }, "MTM | Now playing")),
+				React.createElement("div", { className: "Title" }, localStorage.NPChannel + " | Now playing")),
 				React.createElement("div", { className: "Artwork cover_art station_art", id: "cover_art", style: { 'backgroundImage': 'url(' + this.props.track.artwork + ')' } }),
 				React.createElement(TrackInformation, { track: this.props.track }),
 				React.createElement(Scrubber, null),
@@ -131,11 +117,7 @@ var Timestamps = React.createClass({ displayName: "Timestamps",
 			React.createElement("div", { className: "Timestamps" },
 				React.createElement("div", { className: "Time Time--current" }, this.convertTime(this.props.currentTime)),
 				React.createElement("div", { className: "Time Time--total" }, this.convertTime(this.props.duration))));
-
-
 	} });
-
-
 
 // Render the UI
 ReactDOM.render(

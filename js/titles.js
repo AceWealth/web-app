@@ -5,18 +5,8 @@ var nowPlaying = new Vue({
         data: {"np":{"now_playing":{"song":{"title":"Song Title","artist":"Song Artist","channel":"Channel Name","art":"\/static\/img\/generic_song.jpg"},"is_request":false,"elapsed":0,"duration":0}}},
     });
 
-function determineChannel() {
-if (document.getElementById('artist').innerHTML == "MTM Radio") {
-    sessionStorage.NPAPIurl = 'https://mtmrad.io/api/nowplaying/1';
-    } else
-if (document.getElementById('artist').innerHTML == "UVC Radio") {
-    sessionStorage.NPAPIurl = 'https://mtmrad.io/api/nowplaying/2';
-    }
-}
-
 function loadNowPlaying() {
-        determineChannel()
-        $.getJSON(sessionStorage.NPAPIurl, function(row) {
+        $.getJSON(localStorage.NPAPIurl, function(row) {
             nowPlaying.np = row;
 
             if ('mediaSession' in navigator) {
