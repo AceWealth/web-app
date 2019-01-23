@@ -6,10 +6,10 @@ const player = new Plyr('#audio', {
     });
 player.source = {
         type: 'audio',
-        title: 'MTM Radio',
+        title: localStorage.NPChannel,
         sources: [
                   {
-                        src: sessionStorage.NPurl,
+                        src: localStorage.NPurl,
                         type: 'audio/mp3',
                         live: true,
                    },
