@@ -23,4 +23,7 @@ if (sessionStorage.NPSpotify === "null") {
         window.open(sessionStorage.NPSpotify, '_blank');
     		}
 	});
+$("div.Title").on("click", function() {
+		window.open(localStorage.HPurl);
+	});
 }
