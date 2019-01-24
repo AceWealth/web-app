@@ -8,7 +8,7 @@ var nowPlaying = new Vue({
 function loadNowPlaying() {
 	var url = localStorage.NPAPIurl
 	url += '?' + $.param({
-	'api-key': 'cafb8627a1288ed2'
+	'api-key': localStorage.NPAPIkey
 	});
         $.getJSON(url, function(row) {
             nowPlaying.np = row;
