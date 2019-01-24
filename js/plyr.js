@@ -1,11 +1,12 @@
 function StartPage() {
 const player = new Plyr('#audio', {
-        enabled: true,
 	autoplay: true,
+	ads: {
+	enabled: true,
         publisherId: '962116583387701'
+	}
     });
 player.source = {
-        type: 'audio',
         title: localStorage.NPChannel,
         sources: [
                   {
