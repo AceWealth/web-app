@@ -1,5 +1,5 @@
 var nowPlaying;
-var title_count = 25;
+var title_count = 35;
 var artist_count = 50;
 var nowPlaying = new Vue({
         data: {"np":{"now_playing":{"song":{"title":"Song Title","artist":"Song Artist","channel":"Channel Name","art":"\/static\/img\/generic_song.jpg"},"is_request":false,"elapsed":0,"duration":0}}},
