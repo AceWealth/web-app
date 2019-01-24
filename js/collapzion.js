@@ -1,7 +1,8 @@
 setTimeout(function(){
+var styleOptions = 'left: unset; width: 40%;'
 var $newDiv = $("<div/>")   // creates a div element
                  .attr("id", "btncollapzion")  // adds the id
-                 .html("<div></div>");
+                 .html("<div style=" + styleOptions + "></div>");
 $(document.body).append($newDiv);
 jQuery(function($){
     $('#btncollapzion').Collapzion({
