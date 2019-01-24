@@ -6,7 +6,11 @@ var nowPlaying = new Vue({
     });
 
 function loadNowPlaying() {
-        $.getJSON(localStorage.NPAPIurl, function(row) {
+	var url = localStorage.NPAPIurl
+	url += '?' + $.param({
+	'api-key': 'cafb8627a1288ed2'
+	});
+        $.getJSON(url, function(row) {
             nowPlaying.np = row;
 
             if ('mediaSession' in navigator) {
