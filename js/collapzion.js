@@ -1,15 +1,16 @@
 setTimeout(function(){
 var styleOptions = 'left: unset; width: 40%;'
+var classOptions = 'animated bounceIn'
 var $newDiv = $("<div/>")   // creates a div element
                  .attr("id", "btncollapzion")  // adds the id
-                 .html("<div style=" + styleOptions + "></div>");
+                 .html("<div class=" + classOptions + " style=" + styleOptions + "></div>");
 $(document.body).append($newDiv);
 jQuery(function($){
     $('#btncollapzion').Collapzion({
         _child_attribute:[
             {
               'label':'My Profile',
-              'url':'#',
+              'url':"javascript:SCStart;",
               'icon':'&#xE7FD;'
             },
         ],
